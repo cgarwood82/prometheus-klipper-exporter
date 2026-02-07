@@ -633,37 +633,37 @@ func (c Collector) collectPrinterObjects(ch chan<- prometheus.Metric) {
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuWriteBytes,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.BytesWrite,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuReadBytes,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.BytesRead,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuRetransmitBytes,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.BytesRetransmit,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuInvalidBytes,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.BytesInvalid,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuSendSeq,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.SendSeq,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuReceiveSeq,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.ReceiveSeq,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
 			mcuRetransmitSeq,
-			prometheus.GaugeValue,
+			prometheus.CounterValue,
 			mv.LastStats.RetransmitSeq,
 			sensorName)
 		ch <- prometheus.MustNewConstMetric(
